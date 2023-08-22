@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy
 
 on:
   push:
@@ -6,15 +6,11 @@ on:
       - main # Set the branch you want to trigger the workflow on (change if needed)
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest # Specify the runner (GitHub-hosted runner in this case)
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2 # Checks out your repository code
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3 # A GitHub Action to deploy to GitHub Pages
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./path-to-your-website-files # Specify the directory containing your HTML and CSS files
+      # Add your workflow steps her
