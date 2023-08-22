@@ -1,0 +1,25 @@
+/* Common styles for all pages */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Styles for the homepage */
+h1 {
+    color: #008080; /* Dark teal */
+}
+
+/* Styles for the navigation links */
+nav a {
+    text-decoration: none;
+    color: #555;
+}
+
+/* Styles for the tiles or sections */
+.tile {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+}
