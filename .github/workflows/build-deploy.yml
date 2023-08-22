@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -6,25 +6,15 @@ on:
       - main # Set the branch you want to trigger the workflow on (change if needed)
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest # Specify the runner (GitHub-hosted runner in this case)
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2 # Checks out your repository code
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14 # Specify the Node.js version you need (adjust as needed)
-
-      - name: Install dependencies and build
-        run: |
-          npm install # Install any dependencies you need for your build
-          npm run build # Replace with your build command if needed
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3 # A GitHub Action to deploy to GitHub Pages
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./path-to-your-website-files # Specify the directory containing your built HTML and CSS files
+          publish_dir: ./path-to-your-website-files # Specify the directory containing your HTML and CSS files
