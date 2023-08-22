@@ -1,0 +1,16 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main # Set the branch you want to trigger the workflow on (change if needed)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Specify the runner (GitHub-hosted runner in this case)
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2 # Checks out your repository code
+
+      # Add your workflow steps here
