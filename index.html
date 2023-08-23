@@ -9,31 +9,32 @@
             background-color: #F5F5DC; /* Light Beige color */
         }
 
-     /* CSS for the banner */
-.banner {
-    background-color: #0073e6;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-size: 24px;
-    width: 93%; /* Adjust the width as needed */
-    margin: 0 auto; /* Center the banner horizontally */
-    height: 100px; /* Increase the height of the banner */
-    position: relative; /* Allow for absolute positioning */
-}
+        /* CSS for the banner */
+        .banner {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            width: 100%; /* Full width */
+            height: 100px; /* Increase the height of the banner */
+            display: flex;
+            align-items: center; /* Center text vertically */
+            justify-content: center; /* Center text horizontally */
+            border-radius: 15px; /* Add rounded corners */
+            position: relative; /* Allow for absolute positioning */
+        }
 
-/* Create a pseudo-element for the banner offset */
-.banner::before {
-    content: "";
-    background-color: #0073e6;
-    width: 10%; /* Adjust the offset width as needed */
-    height: 100%; /* Match the height of the banner */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; /* Place it behind the banner content */
-}
-
+        /* Create a pseudo-element for the banner offset */
+        .banner::before {
+            content: "";
+            background-color: #0073e6;
+            width: 10%; /* Adjust the offset width as needed */
+            height: 100%; /* Match the height of the banner */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Place it behind the banner content */
+        }
 
         /* CSS Grid for the tiles */
         .tile-container {
@@ -49,11 +50,18 @@
             padding: 20px;
             text-align: center;
             height: 200px; /* Increase the height of the tiles */
+            border-radius: 15px; /* Add rounded corners to the panels */
+            transition: transform 0.3s ease; /* Add a hover effect */
         }
 
         /* Style to fill the webpage below the banner */
         .content {
             padding: 20px;
+        }
+
+        /* Add a hover effect for the panels */
+        .tile:hover {
+            transform: translateY(-5px); /* Move the panel up slightly on hover */
         }
     </style>
 </head>
@@ -65,28 +73,4 @@
 
     <!-- Content container to fill the webpage below the banner -->
     <div class="content">
-        <!-- Tile container for the 2x2 grid -->
-        <div class="tile-container">
-            <!-- Tile 1 linking to "Chronicles of Yeshwanth’s life" -->
-            <div class="tile">
-                <a href="chronicles.html">Chronicles of Yeshwanth’s life</a>
-            </div>
-
-            <!-- Tile 2 linking to "Professional Path" -->
-            <div class="tile">
-                <a href="professional.html">Professional Path</a>
-            </div>
-
-            <!-- Tile 3 linking to "To Do Before I Die" -->
-            <div class="tile">
-                <a href="todolist.html">To Do Before I Die</a>
-            </div>
-
-            <!-- Tile 4 linking to "Chai Biscuit Thoughts" -->
-            <div class="tile">
-                <a href="chaibiscuit.html">Chai Biscuit Thoughts</a>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+        <!-- Tile container for the 2
