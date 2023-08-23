@@ -6,28 +6,35 @@
     <style>
         /* Basic CSS for styling the tiles */
         .tile {
-            width: 200px;
+            width: calc(50% - 20px); /* Set tile width to 50% of the available width minus padding and margin */
             height: 200px;
             background-color: #FF00FF;
             padding: 20px;
             margin: 10px;
             text-align: center;
+            float: left; /* Float tiles left to create a 2x2 grid */
         }
 
         /* CSS for the banner */
         .banner {
-            background-color: #0073e6; /* Change to your preferred banner color */
+            background-color: #0073e6;
             color: white;
-            padding: 25px;
+            padding: 10px;
             text-align: center;
             font-size: 24px;
+            width: 100%; /* Make the banner width 100% to span the entire page */
+        }
+
+        /* Clear float to prevent issues with following elements */
+        .clear {
+            clear: both;
         }
     </style>
 </head>
 <body>
     <!-- Banner at the top -->
     <div class="banner">
-        My Journey of Finding Myself
+        Discovering myself
     </div>
 
     <!-- Tile 1 linking to "Chronicles of Yeshwanth’s life" -->
@@ -40,7 +47,7 @@
         <a href="professional.html">Professional Path</a>
     </div>
 
-    <!-- Tile 3 linking to "Bucket list Corner" -->
+    <!-- Tile 3 linking to "To Do Before I Die" -->
     <div class="tile">
         <a href="todolist.html">To Do Before I Die</a>
     </div>
@@ -49,5 +56,8 @@
     <div class="tile">
         <a href="chaibiscuit.html">Chai Biscuit Thoughts</a>
     </div>
+
+    <!-- Clear float to prevent issues with following elements -->
+    <div class="clear"></div>
 </body>
 </html>
