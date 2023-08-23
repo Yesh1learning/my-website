@@ -9,15 +9,31 @@
             background-color: #F5F5DC; /* Light Beige color */
         }
 
-        /* CSS for the banner */
-        .banner {
-            background-color: #0073e6;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            font-size: 24px;
-            width: 90%;
-        }
+     /* CSS for the banner */
+.banner {
+    background-color: #0073e6;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the banner horizontally */
+    height: 150px; /* Increase the height of the banner */
+    position: relative; /* Allow for absolute positioning */
+}
+
+/* Create a pseudo-element for the banner offset */
+.banner::before {
+    content: "";
+    background-color: #0073e6;
+    width: 10%; /* Adjust the offset width as needed */
+    height: 100%; /* Match the height of the banner */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place it behind the banner content */
+}
+
 
         /* CSS Grid for the tiles */
         .tile-container {
