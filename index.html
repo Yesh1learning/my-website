@@ -16,8 +16,7 @@
             padding: 10px;
             text-align: center;
             font-size: 24px;
-            width: fit-content; /* Width adjusts to content */
-            margin: auto; /* Center the banner */
+            width: 100%; /* Full width */
         }
 
         /* CSS Grid for the tiles */
@@ -27,7 +26,7 @@
             gap: 20px; /* Spacing between tiles */
             padding: 20px; /* Padding for the entire grid */
             max-width: 100%; /* Ensure the grid doesn't exceed the viewport width */
-            margin: auto; /* Center the grid */
+            margin: auto; /* Center the grid horizontally */
         }
 
         /* Basic CSS for styling the tiles */
@@ -41,6 +40,19 @@
         /* Style to fill the webpage below the banner */
         .content {
             padding: 20px;
+        }
+
+        /* Add a class to target the second tile for positioning the banner */
+        .tile:nth-child(2) {
+            position: relative;
+        }
+
+        /* Position the banner on top of the second tile */
+        .banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
         }
     </style>
 </head>
