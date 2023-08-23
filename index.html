@@ -17,7 +17,7 @@
         /* CSS Grid for the tiles */
         .tile-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Create a 2x2 grid */
+            grid-template-columns: repeat(2, 1fr); /* Create a 2x2 grid with equal-width columns */
             gap: 20px; /* Spacing between tiles */
             padding: 20px; /* Padding for the entire grid */
         }
@@ -27,6 +27,18 @@
             background-color: #FF00FF;
             padding: 20px;
             text-align: center;
+            /* Add this to make the tiles fill the screen */
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Adjust the link style */
+        .tile a {
+            color: white;
+            text-decoration: none;
         }
     </style>
 </head>
