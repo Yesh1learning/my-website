@@ -4,17 +4,6 @@
     <meta charset="UTF-8">
     <title>My Blog Home</title>
     <style>
-        /* Basic CSS for styling the tiles */
-        .tile {
-            width: calc(50% - 20px); /* Set tile width to 50% of the available width minus padding and margin */
-            height: 200px;
-            background-color: #FF00FF;
-            padding: 20px;
-            margin: 10px;
-            text-align: center;
-            float: left; /* Float tiles left to create a 2x2 grid */
-        }
-
         /* CSS for the banner */
         .banner {
             background-color: #0073e6;
@@ -22,12 +11,22 @@
             padding: 10px;
             text-align: center;
             font-size: 24px;
-            width: 100%; /* Make the banner width 100% to span the entire page */
+            width: 100%;
         }
 
-        /* Clear float to prevent issues with following elements */
-        .clear {
-            clear: both;
+        /* CSS Grid for the tiles */
+        .tile-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Create a 2x2 grid */
+            gap: 20px; /* Spacing between tiles */
+            padding: 20px; /* Padding for the entire grid */
+        }
+
+        /* Basic CSS for styling the tiles */
+        .tile {
+            background-color: #FF00FF;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -37,27 +36,27 @@
         Discovering myself
     </div>
 
-    <!-- Tile 1 linking to "Chronicles of Yeshwanth’s life" -->
-    <div class="tile">
-        <a href="chronicles.html">Chronicles of Yeshwanth’s life</a>
-    </div>
+    <!-- Tile container for the 2x2 grid -->
+    <div class="tile-container">
+        <!-- Tile 1 linking to "Chronicles of Yeshwanth’s life" -->
+        <div class="tile">
+            <a href="chronicles.html">Chronicles of Yeshwanth’s life</a>
+        </div>
 
-    <!-- Tile 2 linking to "Professional Path" -->
-    <div class="tile">
-        <a href="professional.html">Professional Path</a>
-    </div>
+        <!-- Tile 2 linking to "Professional Path" -->
+        <div class="tile">
+            <a href="professional.html">Professional Path</a>
+        </div>
 
-    <!-- Tile 3 linking to "To Do Before I Die" -->
-    <div class="tile">
-        <a href="todolist.html">To Do Before I Die</a>
-    </div>
+        <!-- Tile 3 linking to "To Do Before I Die" -->
+        <div class="tile">
+            <a href="todolist.html">To Do Before I Die</a>
+        </div>
 
-    <!-- Tile 4 linking to "Chai Biscuit Thoughts" -->
-    <div class="tile">
-        <a href="chaibiscuit.html">Chai Biscuit Thoughts</a>
+        <!-- Tile 4 linking to "Chai Biscuit Thoughts" -->
+        <div class="tile">
+            <a href="chaibiscuit.html">Chai Biscuit Thoughts</a>
+        </div>
     </div>
-
-    <!-- Clear float to prevent issues with following elements -->
-    <div class="clear"></div>
 </body>
 </html>
