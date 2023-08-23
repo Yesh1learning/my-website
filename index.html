@@ -15,13 +15,14 @@
             color: white;
             text-align: center;
             font-size: 24px;
-            width: 94%; /* Adjust the width as needed */
+            width: 93%; /* Adjust the width as needed */
             margin: 0 auto; /* Center the banner horizontally */
             height: 100px; /* Increase the height of the banner */
             display: flex;
             align-items: center; /* Center text vertically */
             justify-content: center; /* Center text horizontally */
             position: relative; /* Allow for absolute positioning */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
         }
 
         /* Create a pseudo-element for the banner offset */
@@ -51,7 +52,7 @@
             text-align: center;
             height: 200px; /* Increase the height of the tiles */
             border-radius: 15px; /* Add rounded corners to the panels */
-            transition: transform 0.3s ease; /* Add a hover effect */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
         }
 
         /* Style to fill the webpage below the banner */
@@ -59,9 +60,16 @@
             padding: 20px;
         }
 
+        /* Add a hover effect for the banner */
+        .banner:hover {
+            background-color: #0056b3; /* Change background color on hover */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
+        }
+
         /* Add a hover effect for the panels */
         .tile:hover {
             transform: translateY(-5px); /* Move the panel up slightly on hover */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
         }
     </style>
 </head>
